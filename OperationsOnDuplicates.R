@@ -32,17 +32,23 @@ cat(countDuplicates(newdata))
 #Input = "baabc"
 #Desired Output = "bac"
 
-data = "SuryaLovesJohnCena"
+data = "Surya Loves John Cena"
 unique(data)
-uniqchars <- function(x) unique(strsplit(x, "")[[1]]) 
-x = uniqchars(data)
+uniquecharacters <- function(x) unique(strsplit(x, "")[[1]]) 
+x = uniquecharacters(data)
 
 output = paste(x, collapse = "")
 output
-#"SuryaLovesJhnC"
+#"Surya LovesJhnC"
 #--------------------------------------------------------------------------------------------
 
-#Given a vector, return the element with its frequency
+#Given a vector, remove duplicates and return only the unique elements
+data= c(7,2,2,1,3,3,4,4)
+unique(data)
+#[1] 7 2 1 3 4
+#--------------------------------------------------------------------------------------------
+
+#Given a vector, return the elements with its frequency
 data= c(7,2,2,1,3,3,4,4)
 datatable = table(data)
 data.frame(datatable)
@@ -52,9 +58,3 @@ data.frame(datatable)
 #3    3    2
 #4    4    2
 #5    7    1
-#--------------------------------------------------------------------------------------------
-
-#Given a vector, remove duplicates and return only the unique elements
-data= c(7,2,2,1,3,3,4,4)
-unique(data)
-#[1] 7 2 1 3 4
