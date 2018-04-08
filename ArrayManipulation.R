@@ -31,3 +31,93 @@
 #After third update list will be 100 200 200 200 100.
 #So the required answer will be 200.
 
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#SOLUTION:
+
+list = suppressWarnings(readLines(file("stdin")));
+
+x= list[1]
+space = gregexpr(pattern =' ', x)[[1]][1]
+
+first =substring(x, 1, space)
+first  = as.numeric(first)
+
+last =substring(x, space, nchar(x))
+last  = as.numeric(last)
+
+array = array(rep(0, first))
+
+for(i in 1:last)
+{
+  
+  y = list[i+1]
+  space1 = gregexpr(pattern =' ', y)[[1]][1]
+  space2 = gregexpr(pattern =' ', y)[[1]][2]
+  
+  first =substring(y, 1, space1)
+  first  = as.numeric(first)
+  
+  middle =substring(y, space1, space2)
+  middle  = as.numeric(middle)
+  
+  last =substring(y, space2, nchar(y))
+  last  = as.numeric(last)
+  
+  for(j in first:middle){
+    array[j]=array[j]+last
+  }
+}
+
+cat(max(array))
+
+----------------------------------------------------------
+
+list <- list("5 3", "1 2 100", "2 5 100", "3 4 100")
+list = list("4 3", "2 3 603", "1 1 286", "4 4 882")
+
+print(list)
+
+x= list[1]
+space = gregexpr(pattern =' ', x)[[1]][1]
+space
+
+first =substring(x, 1, space)
+first  = as.numeric(first)
+first
+
+last =substring(x, space, nchar(x))
+last  = as.numeric(last)
+last
+
+array = array(rep(0, first))
+array
+
+for(i in 1:last)
+{
+  
+  y = list[i+1]
+  space1 = gregexpr(pattern =' ', y)[[1]][1]
+  space1
+  space2 = gregexpr(pattern =' ', y)[[1]][2]
+  space2
+  
+  first =substring(y, 1, space1)
+  first  = as.numeric(first)
+  first
+  
+  middle =substring(y, space1, space2)
+  middle  = as.numeric(middle)
+  middle
+  
+  last =substring(y, space2, nchar(y))
+  last  = as.numeric(last)
+  last
+  
+  for(j in first:middle){
+    array[j]=array[j]+last
+  }
+}
+
+array
+cat(max(array))
