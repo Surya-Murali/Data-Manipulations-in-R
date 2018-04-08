@@ -13,7 +13,6 @@
 #So the required answer will be 2.
 
 #SOLUTION:
-
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 library(data.table)
 #data = suppressWarnings(readLines(file("stdin")));
@@ -27,10 +26,24 @@ countDuplicates = function(newdata)
 }
 cat(countDuplicates(newdata))
 #3
+#--------------------------------------------------------------------------------------------
 
+#Removing duplicates in a String
+#Input = "baabc"
+#Desired Output = "bac"
+
+data = "SuryaLovesJohnCena"
+unique(data)
+uniqchars <- function(x) unique(strsplit(x, "")[[1]]) 
+x = uniqchars(data)
+
+output = paste(x, collapse = "")
+output
+#"SuryaLovesJhnC"
 #--------------------------------------------------------------------------------------------
 
 #Given a vector, return the element with its frequency
+data= c(7,2,2,1,3,3,4,4)
 datatable = table(data)
 data.frame(datatable)
 #  data Freq
@@ -39,14 +52,9 @@ data.frame(datatable)
 #3    3    2
 #4    4    2
 #5    7    1
-
 #--------------------------------------------------------------------------------------------
 
 #Given a vector, remove duplicates and return only the unique elements
 data= c(7,2,2,1,3,3,4,4)
 unique(data)
 #[1] 7 2 1 3 4
-
-#--------------------------------------------------------------------------------------------
-
-
