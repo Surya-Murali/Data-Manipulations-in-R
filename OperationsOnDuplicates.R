@@ -10,6 +10,9 @@
 #Sample Input:
 # [5,1,2,2,3,3]
 
+#Sample Output:
+#2
+
 #Explanation:
 #The first element indicates that there are 5 other elements in the list. 
 #1 occurs once, 2 occurs twice and 3 occurs twice. Hence, there are 2 duplicates: 2 and 3.
