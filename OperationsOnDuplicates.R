@@ -37,3 +37,18 @@ countDuplicates = function(newdata)
 }
 
 cat(countDuplicates(newdata))
+#3
+
+#--------------------------------------------------------------------------------------------
+
+#Given a vector, return the element with its frequency
+datatable = table(data)
+data.frame(datatable)
+
+#  data Freq
+#1    1    1
+#2    2    2
+#3    3    2
+#4    4    2
+#5    7    1
+
