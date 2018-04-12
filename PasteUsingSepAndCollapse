@@ -1,0 +1,28 @@
+x=c("AAA", "BBB", "CCC")
+y= c(1, 2, 3)
+
+#Sep
+paste(x, y, sep = "%%%")
+#"AAA%%%1" "BBB%%%2" "CCC%%%3"
+
+#Collapse
+paste(x, y, collapse = "%%%")
+#"AAA 1%%%BBB 2%%%CCC 3"
+
+x <- c("a", "b", "c", "d")
+y <- c("w", "x", "y", "z")
+
+#Sep
+paste(x,y, sep="%")
+"a%w" "b%x" "c%y" "d%z"
+
+#Paste
+paste(x,y, collapse="%")
+"a w%b x%c y%d z"
+
+paste("Hello", "world", sep=",")
+#"Hello,world"
+paste("Hello", "Hey", "world", sep =",")
+#"Hello,Hey,world"
+paste("Hello", "world", collapse =",")
+#"Hello world"
