@@ -16,7 +16,7 @@ y <- c("w", "x", "y", "z")
 paste(x,y, sep="%")
 "a%w" "b%x" "c%y" "d%z"
 
-#Paste
+#Collapse
 paste(x,y, collapse="%")
 "a w%b x%c y%d z"
 
@@ -26,3 +26,16 @@ paste("Hello", "Hey", "world", sep =",")
 #"Hello,Hey,world"
 paste("Hello", "world", collapse =",")
 #"Hello world"
+
+#Some more examples:
+
+paste(c("The", "quick", "brown", "fox"))
+#"The"   "quick" "brown" "fox"
+paste(c("The", "quick", "brown", "fox"), sep =" ")
+#"The"   "quick" "brown" "fox"
+paste(c("The", "quick", "brown", "fox"), collapse =" ")
+#"The quick brown fox"
+paste(c("The", "quick", "brown", "fox"), collapse ="/")
+#"The/quick/brown/fox"
+paste(LETTERS[1:5], 1:5, sep="%", collapse="///")
+#"A%1///B%2///C%3///D%4///E%5"
