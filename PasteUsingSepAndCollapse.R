@@ -1,5 +1,16 @@
+#Concatenation in R using Paste:
+#Understanding Sep Vs Collapse
+
 x=c("AAA", "BBB", "CCC")
 y= c(1, 2, 3)
+
+# When you use 'paste' for multiple vectors, 'sep' defines what
+# separates the entries in those tuple-wise concatenations.
+# 
+# When you use paste a *collapse* value, it will return
+# any concatenated pairs as part of a single length - 
+# a one character vector, with the tuples separated by 
+# the string you passed to 'collapse'
 
 #Sep
 paste(x, y, sep = "%%%")
