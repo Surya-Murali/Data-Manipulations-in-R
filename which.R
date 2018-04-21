@@ -21,12 +21,21 @@ mean(clinic$score[clinic$type=='drug'])
 
 mean(clinic$score[which(clinic$type=='drug')])
 
-Lst <- list(name="Fred", wife="Mary",  
-            no.children=3, child.ages=c(4,7,9))
-Lst
-Lst[[4]]
+which(letters == "a")
+which(letters == "z")
 
-model = lm(data=clinic, type~score)
-install.packages("asbio")
-library(asbio)
-see.regression.tck()
+x <- c(1,5,8,4,6)
+x
+which(x == 5)
+which(x != 5)
+
+datasets::npk
+which(npk$yield == 62)
+which((npk$yield == 48.8) & (npk$N == 1))
+
+which(npk$yield == max(npk$yield))
+
+x <- matrix(1:16,4,4)
+which.min(x)
+which.max(x)
+which(x %% 2 == 0)
