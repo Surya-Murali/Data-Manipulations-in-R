@@ -1,3 +1,6 @@
+#The which() function will return the position of the elements(i.e., row number/column number/array index) in a logical vector which are TRUE. 
+#Unlike the other base R functions, the which() will accept only the arguments with typeof as logical while the others will give an error.
+
 x=c(1,0,2,0)
 
 sum(x==0)
@@ -8,7 +11,6 @@ hist(x)
 rep(1:2,times=10, each=2)
 
 m=matrix(1:12,nrow=3,ncol=4,byrow=T)
-m
 m[1,]
 
 type<-c(rep("drug",2),"placebo",rep("drug",2),rep("placobo",3))
